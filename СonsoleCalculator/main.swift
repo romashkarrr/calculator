@@ -41,7 +41,6 @@ while playCalculator {
     }
 
     
-    
     print("Бажаєте продовжити? Якщо так введіть: 'y',  або якщо бажаєте завершити введіть 'n'")
     wantToContinue()
 }

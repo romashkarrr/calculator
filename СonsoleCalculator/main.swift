@@ -6,6 +6,7 @@ var globalOperation = ""
 var hystoryCalculation = [String]()
 
 var playCalculator = true
+// rebyt
 while playCalculator {
     let firstNumber = InputNumders()
     let lastNumber = InputNumders()

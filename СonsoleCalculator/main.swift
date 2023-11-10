@@ -1,23 +1,24 @@
 import Foundation
 
-var globalFirstNumber = 0
-var globalLastNumber = 0
+var globalArrayFirstAndLastNumber = [Int]()
+var globalNumber = 0
 var globalOperation = ""
 var hystoryCalculation = [String]()
 
 var playCalculator = true
 while playCalculator {
-    let firstNumber = InputNumders()
-    let lastNumber = InputNumders()
+    let numOne = "Введіть перше число"
+    let numTwo = "Введіть друге число"
     
     inputOperation()
-    firstNumber.inputFirstNumber()
-    lastNumber.inputLastNumber()
+    inputNumbers(numOne)
+    firstNumberNoEmpty = true
+    inputNumbers(numTwo)
     
-    let result = calculation(globalFirstNumber, globalLastNumber, globalOperation)
-    print("Результат: \(globalFirstNumber) \(globalOperation) \(globalLastNumber) = \(result)")
+    let result = calculation(globalArrayFirstAndLastNumber[0], globalArrayFirstAndLastNumber[1], globalOperation)
+    print("Результат: \(globalArrayFirstAndLastNumber[0]) \(globalOperation) \(globalArrayFirstAndLastNumber[1]) = \(result)")
     
-    let hystory = "\(globalFirstNumber) \(globalOperation) \(globalLastNumber) = \(result)"
+    let hystory = "\(globalArrayFirstAndLastNumber[0]) \(globalOperation) \(globalArrayFirstAndLastNumber[1]) = \(result)"
     hystoryCalculation.append(hystory)
     
     print("Переглянути історію обчислень? 'y' - Так    'n' - Ні")

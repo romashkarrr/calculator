@@ -6,7 +6,6 @@ var globalOperation = ""
 var hystoryCalculation = [String]()
 
 var playCalculator = true
-
 while playCalculator {
     let firstNumber = InputNumders()
     let lastNumber = InputNumders()
@@ -18,7 +17,7 @@ while playCalculator {
     let result = calculation(globalFirstNumber, globalLastNumber, globalOperation)
     print("Результат: \(globalFirstNumber) \(globalOperation) \(globalLastNumber) = \(result)")
     
-    var hystory = "\(globalFirstNumber) \(globalOperation) \(globalLastNumber) = \(result)"
+    let hystory = "\(globalFirstNumber) \(globalOperation) \(globalLastNumber) = \(result)"
     hystoryCalculation.append(hystory)
     
     print("Переглянути історію обчислень? 'y' - Так    'n' - Ні")

@@ -9,24 +9,24 @@ func inputOperation() {
             let operation = String(userOperation) // Якшо не nil то конвертується в рядок і призначається змінній.
             globalOperation = operation
             switch operation {
-            case "+":
-                print("Ви обрали операцію: \(operation)")
-                operationNoEmpty = false
-            case "-":
-                print("Ви обрали операцію: \(operation)")
-                operationNoEmpty = false
-            case "*":
-                print("Ви обрали операцію: \(operation)")
-                operationNoEmpty = false
-            case "/":
-                print("Ви обрали операцію: \(operation)")
-                operationNoEmpty = false
-            case "%":
-                print("Ви обрали операцію: \(operation)")
-                operationNoEmpty = false
-            default:
-                print("На жаль ви ввели операцію якою я не вмію користуватися")
-                operationNoEmpty = true
+                case "+":
+                    print("Ви обрали операцію: \(operation)")
+                    operationNoEmpty = false
+                case "-":
+                    print("Ви обрали операцію: \(operation)")
+                    operationNoEmpty = false
+                case "*":
+                    print("Ви обрали операцію: \(operation)")
+                    operationNoEmpty = false
+                case "/":
+                    print("Ви обрали операцію: \(operation)")
+                    operationNoEmpty = false
+                case "%":
+                    print("Ви обрали операцію: \(operation)")
+                    operationNoEmpty = false
+                default:
+                    print("На жаль ви ввели операцію якою я не вмію користуватися")
+                    operationNoEmpty = true
             }
         } else { // Якщо введені дані nil або пустий рядок, то повертається повіддомлення і цикл працює знову.
             print("На жаль ви нічого не ввели.")

@@ -1,8 +1,11 @@
 import Foundation
 
+enum ErrorCalculating: Error {
+    case divisionByZero
+}
+
 struct Calculation {
-    let enumOperation = InputOperation()
-    func calculate( _ firstNumber: Int, _  lastNumber: Int, _ operation: Operation) -> Int {
+    func calculate(_ firstNumber: Int, _ lastNumber: Int, _ operation: Operation) throws -> Int {
         switch operation {
         case .plus:
             return firstNumber + lastNumber
@@ -11,12 +14,8 @@ struct Calculation {
         case .multyplay:
             return firstNumber * lastNumber
         case .division:
-            if lastNumber == 0 {
-                print("На 0 ділити не можна")
-                return 0
-            } else {
-                return firstNumber / lastNumber
-            }
+            guard lastNumber != 0 else{ throw ErrorCalculating.divisionByZero }
+            return firstNumber / lastNumber
         case .remainderFromDivision:
             return firstNumber % lastNumber
         }

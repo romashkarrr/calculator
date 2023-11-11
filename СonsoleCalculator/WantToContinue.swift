@@ -6,11 +6,10 @@ func wantToContinue() {
         if let userOperation = readLine(), !userOperation.isEmpty {
             let operation = String(userOperation)
             if operation == "y" {
-                playCalculator = true
                 continueCalculation = false
             } else if operation == "n" {
-                playCalculator = false
                 continueCalculation = false
+                break
             } else {
                 print("Ви ввели не коректні дані, спробуйте ще раз")
                 continueCalculation = true

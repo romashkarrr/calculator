@@ -1,16 +1,8 @@
 import Foundation
 
-enum Operation: String {
-    case plus = "+"
-    case minus = "-"
-    case multyplay = "*"
-    case division = "/"
-    case remainderFromDivision = "%"
-}
-
 // Обчислення прикладу
-func calculation (_ firstNumber: Int,_  lastNumber: Int,_ userOperation: String) -> Int {
-    let operation:Operation = Operation(rawValue: userOperation) ?? .plus
+func calculation (_ firstNumber: Int,_  lastNumber: Int,_ userOperation: Operation) -> Int {
+    let operation:Operation = userOperation
     switch operation {
     case .plus:
         return firstNumber + lastNumber

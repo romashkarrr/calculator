@@ -1,8 +1,7 @@
 import Foundation
 
 // Обчислення прикладу
-func calculation (_ firstNumber: Int,_  lastNumber: Int,_ userOperation: Operation) -> Int {
-    let operation:Operation = userOperation
+func calculate( _ firstNumber: Int, _  lastNumber: Int, _ operation: Operation) -> Int {
     switch operation {
     case .plus:
         return firstNumber + lastNumber

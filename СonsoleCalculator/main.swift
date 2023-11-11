@@ -12,10 +12,11 @@ repeat {
     let calculation = Calculation()
     
     inputOperation.inputOperation()
+    
     print("Введіть перше число")
     inputNumber.numberCheck()
+    
     print("Введіть друге число")
-    let numTwo = "Введіть друге число"
     inputNumber.numberCheck()
     
     let result = calculation.calculate(globalArrayFirstAndLastNumber[0], globalArrayFirstAndLastNumber[1], globalOperation)

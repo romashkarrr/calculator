@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		846A13F22AFAD15F00E0AE90 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A13F12AFAD15F00E0AE90 /* main.swift */; };
+		84A3440A2B012A7C0054FA1E /* CalculationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A344092B012A7C0054FA1E /* CalculationError.swift */; };
 		84F5DBBB2AFFF1980047FD9D /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5DBBA2AFFF1980047FD9D /* Operation.swift */; };
 		84F5DBBD2AFFF54C0047FD9D /* InputReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5DBBC2AFFF54C0047FD9D /* InputReader.swift */; };
 		84F5DBBF2AFFF5AC0047FD9D /* Сalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5DBBE2AFFF5AC0047FD9D /* Сalculator.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		846A13EE2AFAD15F00E0AE90 /* consoleCalculator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = consoleCalculator; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A13F12AFAD15F00E0AE90 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		84A344092B012A7C0054FA1E /* CalculationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationError.swift; sourceTree = "<group>"; };
 		84F5DBBA2AFFF1980047FD9D /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		84F5DBBC2AFFF54C0047FD9D /* InputReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputReader.swift; sourceTree = "<group>"; };
 		84F5DBBE2AFFF5AC0047FD9D /* Сalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Сalculator.swift"; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				84F5DBBC2AFFF54C0047FD9D /* InputReader.swift */,
 				84F5DBBA2AFFF1980047FD9D /* Operation.swift */,
 				84F5DBBE2AFFF5AC0047FD9D /* Сalculator.swift */,
+				84A344092B012A7C0054FA1E /* CalculationError.swift */,
 			);
 			path = "СonsoleCalculator";
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			files = (
 				84F5DBBF2AFFF5AC0047FD9D /* Сalculator.swift in Sources */,
 				84F5DBBB2AFFF1980047FD9D /* Operation.swift in Sources */,
+				84A3440A2B012A7C0054FA1E /* CalculationError.swift in Sources */,
 				84F5DBBD2AFFF54C0047FD9D /* InputReader.swift in Sources */,
 				846A13F22AFAD15F00E0AE90 /* main.swift in Sources */,
 			);

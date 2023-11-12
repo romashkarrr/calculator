@@ -1,9 +1,5 @@
 import Foundation
 
-enum CalculationError: Error {
-    case divisionByZero
-}
-
 struct Calculator {
     func calculate(_ firstNumber: Int, _ lastNumber: Int, _ operation: Operation) throws -> Int {
         switch operation {

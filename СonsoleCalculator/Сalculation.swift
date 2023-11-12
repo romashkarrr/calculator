@@ -1,10 +1,10 @@
 import Foundation
 
-enum ErrorCalculating: Error {
+enum CalculationError: Error {
     case divisionByZero
 }
 
-struct Calculation {
+struct Calculator {
     func calculate(_ firstNumber: Int, _ lastNumber: Int, _ operation: Operation) throws -> Int {
         switch operation {
         case .plus:
@@ -14,7 +14,9 @@ struct Calculation {
         case .multyplay:
             return firstNumber * lastNumber
         case .division:
-            guard lastNumber != 0 else{ throw ErrorCalculating.divisionByZero }
+            guard lastNumber != 0 else {
+                throw CalculationError.divisionByZero
+            }
             return firstNumber / lastNumber
         case .remainderFromDivision:
             return firstNumber % lastNumber

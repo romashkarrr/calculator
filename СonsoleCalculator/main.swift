@@ -4,20 +4,27 @@ var hystoryCalculation = [String]()
 
 repeat {
     
-    print("Введіть будь ласка операцію яку ви хочете зробити, ось операції якими я вмію користуватися: +  -  *  /  %")
-    let inputOperation = InputFromTheUser()
-    let inputNumber = InputFromTheUser()
-    let calculation = Calculation()
+    var result: Int = 0
+    let inputOperation = InputReader()
+    let inputNumber = InputReader()
+    let calculation = Calculator()
     
-    let operation = inputOperation.readTheOperation()
+    print("Введіть будь ласка операцію яку ви хочете зробити, ось операції якими я вмію користуватися: +  -  *  /  %")
+    
+    let operation = inputOperation.getOperation()
     
     print("Введіть перше число")
-    let firstNumber = inputNumber.numberCheck()
+    let firstNumber = inputNumber.getNumber()
     
     print("Введіть друге число")
-    let lastNumber = inputNumber.numberCheck()
+    let lastNumber = inputNumber.getNumber()
     
-    let result = try calculation.calculate(firstNumber, lastNumber, operation)
+    do {
+        result = try calculation.calculate(firstNumber, lastNumber, operation)
+    } catch {
+        print("На нуль ділити не можна")
+    }
+
     print("Результат: \(firstNumber) \(operation.rawValue) \(lastNumber) = \(result)")
     
     let hystory = "\(firstNumber) \(operation.rawValue) \(lastNumber) = \(result)"
@@ -28,6 +35,7 @@ repeat {
         for i in hystoryCalculation {
             print(i)
         }
+        break
     }
 
     print("Якщо бажаєте завершити введіть 'n', для продовження нажміть любу клавішу.")

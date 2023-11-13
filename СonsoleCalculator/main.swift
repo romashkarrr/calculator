@@ -5,24 +5,33 @@ var hystoryCalculation = [String]()
 repeat {
     
     var result: Int = 0
-    let inputOperation = InputReader()
-    let inputNumber = InputReader()
+    var number = CheckNumber()
+    var operation:Operation = .division
+    let inputDate = InputReader()
     let calculation = Calculator()
     
     print("Введіть будь ласка операцію яку ви хочете зробити, ось операції якими я вмію користуватися: +  -  *  /  %")
-    
-    let operation = inputOperation.getOperation()
+    var continueLoop = true
+    repeat {
+        do {
+            operation = try inputDate.getOperation()
+            continueLoop = false
+        } catch InputReaderError.lineNoOperation {
+            print("Не коректні дані")
+            continueLoop = true
+        }
+    } while continueLoop
     
     print("Введіть перше число")
-    let firstNumber = inputNumber.getNumber()
+    var firstNumber = number.check()
     
     print("Введіть друге число")
-    let lastNumber = inputNumber.getNumber()
+    var lastNumber = number.check()
     
     do {
         result = try calculation.calculate(firstNumber, lastNumber, operation)
-    } catch {
-        print("На нуль ділити не можна")
+    } catch CalculationError.divisionByZero {
+        print("Не коректні дані")
     }
 
     print("Результат: \(firstNumber) \(operation.rawValue) \(lastNumber) = \(result)")
@@ -31,11 +40,10 @@ repeat {
     hystoryCalculation.append(hystory)
     
     print("якщо бажаєте переглянути історію обчислень нажміть 'y'  якщо ні то любу іншу клавішу")
-    while readLine() == "y" {
+    if readLine() == "y" {
         for i in hystoryCalculation {
             print(i)
         }
-        break
     }
 
     print("Якщо бажаєте завершити введіть 'n', для продовження нажміть любу клавішу.")
